@@ -1,0 +1,36 @@
+{
+  "name": "bryks",
+  "version": "1.0.0",
+  "description": "App to revolutionize learning",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "William Bryk",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "cloudinary": "^1.11.0",
+    "concurrently": "^3.5.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.5",
+    "express-sslify": "^1.2.0",
+    "heroku-ssl-redirect": "0.0.4",
+    "lodash": "^4.17.10",
+    "mongoose": "^5.0.12",
+    "node-persist": "^3.0.1",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "validator": "^10.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}
